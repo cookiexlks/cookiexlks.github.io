@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Linux Terminal</title>
+  <style>
+    body {
+      background-color: #000;
+      color: #33ff33;
+      font-family: 'Courier New', Courier, monospace;
+      padding: 2rem;
+    }
+    .terminal {
+      border: 2px solid #33ff33;
+      padding: 1rem;
+      max-width: 800px;
+      margin: auto;
+      background-color: #111;
+    }
+    .prompt::before {
+      content: "user@linux:~$ ";
+      color: #33ff33;
+    }
+    .command {
+      margin-bottom: 1rem;
+    }
+    .output {
+      color: #ccc;
+      margin-left: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="terminal">
+    <div class="command">
+      <span class="prompt">ls -la</span>
+      <div class="output">
+        total 12<br />
+        drwxr-xr-x 2 user user 4096 Nov 6 13:00 .<br />
+        drwxr-xr-x 3 user user 4096 Nov 6 12:59 ..<br />
+        -rw-r--r-- 1 user user  123 Nov 6 13:00 index.html
+      </div>
+    </div>
+    <div class="command">
+      <span class="prompt">echo "Welcome to the Linux terminal"</span>
+      <div class="output">Welcome to the Linux terminal</div>
+    </div>
+    <div class="command">
+      <span class="prompt">uname -a</span>
+      <div class="output">Linux mythos-core 6.5.0-arch1 #1 SMP PREEMPT_DYNAMIC</div>
+    </div>
+  </div>
+</body>
+</html>
